@@ -1,0 +1,18 @@
+﻿<Window x:Class="BDOExtensions.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDOExtensions"
+        xmlns:viewModels="clr-namespace:BDOExtensions.ViewModels"
+        xmlns:views="clr-namespace:BDOExtensions.Views"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
+        Title="MainWindow" Height="1440" Width="2560" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="#88222222">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <views:MainOverlayView DataContext="{Binding OverlayViewModel}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <views:SettingsView HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="320" MinHeight="480" DataContext="{Binding SettingsViewModel}"/>
+    </Grid>
+</Window>

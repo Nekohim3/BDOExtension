@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="BDOExtensions.Views.MainOverlayView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BDOExtensions.Views"
+             xmlns:viewModels="clr-namespace:BDOExtensions.ViewModels"
+             d:DataContext="{d:DesignInstance viewModels:MainOverlayViewModel}"
+             mc:Ignorable="d">
+    <Border Height="22" BorderThickness="1" BorderBrush="#ff3c3c3c" Background="Transparent" SnapsToDevicePixels="True">
+        <Border Height="20" BorderThickness="1" BorderBrush="#ff282828" Background="Transparent" SnapsToDevicePixels="True">
+            <Border Height="18" BorderThickness="1" BorderBrush="#ff282828" Background="Transparent" SnapsToDevicePixels="True">
+                <Border Height="16" BorderThickness="1" BorderBrush="#ff3c3c3c" Background="Transparent" SnapsToDevicePixels="True">
+                    <Grid Background="#ff222222">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition MinWidth="200" Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Style="{StaticResource SmallOverlayTextBlock}" Grid.Column="0" Text="{Binding BossAlert}" Margin="2,0" Foreground="#ffcccccc"/>
+                        <Grid Grid.Column="1" Width="1" Height="12" Background="#ff999999"/>
+                        <TextBlock Grid.Column="2" Text="ALCH" Margin="2,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource SmallOverlayTextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Alch}" Value="true">
+                                            <Setter Property="Foreground" Value="#FF6CC312"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Alch}" Value="false">
+                                            <Setter Property="Foreground" Value="#FFC32020"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Grid Grid.Column="3" Width="1" Height="12" Background="#ff999999"/>
+                        <TextBlock Grid.Column="4" Text="FOOD" Margin="2,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource SmallOverlayTextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Food}" Value="true">
+                                            <Setter Property="Foreground" Value="#FF6CC312"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Food}" Value="false">
+                                            <Setter Property="Foreground" Value="#FFC32020"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Grid Grid.Column="5" Width="1" Height="12" Background="#ff999999"/>
+                        <TextBlock Grid.Column="6" Text="AHST" Margin="2,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource SmallOverlayTextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Stone}" Value="true">
+                                            <Setter Property="Foreground" Value="#FF6CC312"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Stone}" Value="false">
+                                            <Setter Property="Foreground" Value="#FFC32020"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Grid Grid.Column="7" Width="1" Height="12" Background="#ff999999"/>
+                        <TextBlock Grid.Column="8" Text="SHLT" Margin="2,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource SmallOverlayTextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Shelter}" Value="true">
+                                            <Setter Property="Foreground" Value="#FF6CC312"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Shelter}" Value="false">
+                                            <Setter Property="Foreground" Value="#FFC32020"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Grid Grid.Column="9" Width="1" Height="12" Background="#ff999999"/>
+                        <TextBlock Grid.Column="10" Text="BALM" Margin="2,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource SmallOverlayTextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Balm}" Value="true">
+                                            <Setter Property="Foreground" Value="#FF6CC312"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Balm}" Value="false">
+                                            <Setter Property="Foreground" Value="#FFC32020"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Grid Grid.Column="11" Width="1" Height="12" Background="#ff999999"/>
+                        <TextBlock Style="{StaticResource SmallOverlayTextBlock}" Grid.Column="12" Text="{Binding CurrentTime, StringFormat='hh:mm'}" Margin="2,0" Foreground="#ffcccccc"/>
+                    </Grid>
+                </Border>
+            </Border>
+        </Border>
+    </Border>
+</UserControl>
